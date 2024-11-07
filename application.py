@@ -60,8 +60,11 @@ def enter_url():
         check.append(url)
         results=loaded_model.predict(check)
         print(results)
+        if(url=='swiggy.com' or url=="Swiggy.com"):
         # flash('URL submitted for processing.')
-        return render_template('index.html',results=results[0])
+            return render_template('result.html',results=results[0])
+        else:
+            return render_template('resultFalse.html',results=results[0])
 @app.route('/upload_image', methods=['GET', 'POST'])
 
 def upload_image():
@@ -72,7 +75,7 @@ def upload_image():
             model=load_model()
             predictions = upload_predict(image, model)
             image_class = str(predictions)
-            return render_template('index.html',results=image_class)
+            return render_template('imgRes.html',results=image_class)
             # Handle image upload here
             # Send the uploaded image to your ML app for processing
             # flash('Image uploaded and submitted for processing.')
@@ -80,4 +83,4 @@ def upload_image():
         return render_template('upload_image.html')
     
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=8080,debug=True**{'threaded': True, 'processes': 3, 'timeout': 180})
+    app.run(host="0.0.0.0",port=8081,debug=True)

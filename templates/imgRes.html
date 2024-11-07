@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter URL</title>
+    <title>Upload Image</title>
     
     <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -17,16 +17,16 @@
           </a>
         </div>
     </nav>
-    <div class="container mt-5">
-        <h1 class="text-center">Enter URL</h1>
-        <form method="POST">
-            <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
-                <label for="url">Enter a URL:</label>
-                <input type="text" class="form-control" name="url" id="url" autocomplete="off" style="margin-top: 20px;">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <!-- Flash messages can be displayed here -->
+    <div class="container mt-4">
+        <h1 class="text-center">Result</h1>
+       
+                  <h2 class="mt-4">The Website seems to be {{results}}</h2>
+
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <a  href="/">
+            <button type="button" class="btn btn-secondary">Back to Homepage</button>
+        </a>
     </div>
     
     <!-- Include Bootstrap JavaScript (popper.js and bootstrap.js) -->

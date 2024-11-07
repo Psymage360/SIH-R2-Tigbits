@@ -28,6 +28,14 @@
     </style>
 </head>
 <body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img class="" src="{{url_for('static', filename='fish-svg.svg')}}" alt="Fish" width="45" height="45">
+            PhishBuster
+          </a>
+        </div>
+    </nav>
     <div class="container mt-5">
         <h1 class="text-center">Phishing Website Detection WebApp</h1>
         <form method="POST" id="appForm">
@@ -41,7 +49,7 @@
             <button type="submit" class="btn btn-primary button-spacing">Submit</button>
             <button type="button" class="btn btn-secondary button-spacing">Cancel</button>
         </form>
-        <h2 class="mt-4">The Url seems to be {{results}}</h2>
+        <!-- <h2 class="mt-4">The Url seems to be {{results}}</h2> -->
     </div>
     
     <!-- Include Bootstrap JavaScript (popper.js and bootstrap.js) -->
